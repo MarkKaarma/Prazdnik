@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prazdnik.MainPage">
+    <ContentPage><!--Первая страница. Основа задания. Можно выбрать из списка кому отправить и Label рандомно меняется при кнопки. Также есть RadioButton (эмайл или СМС)-->
+        <StackLayout>
+            <Label Text="Поздравление друзей! Выбирай из списка кому хочешь отправить"
+                   HorizontalOptions="Center" />
+            <Picker x:Name="friend"
+                Title="Выбирай своего компаньона"
+                
+                />
+            <Label x:Name="emaile"
+                HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="telefone"
+                   HorizontalOptions="CenterAndExpand"/>
+            <RadioButton x:Name="radioE"
+                Text="Email"
+                />
+            <RadioButton x:Name="radioT"
+                      Text="SMS"   
+                         />
+            <Button
+                Text="Отправить"
+                VerticalOptions="Center"
+                />
+
+    
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage> 
+        <StackLayout>
+            
+        </StackLayout>
+   </ContentPage>  
+</CarouselPage>
