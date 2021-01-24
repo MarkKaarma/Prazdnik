@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace Prazdnik
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : CarouselPage
     {
         public MainPage()
         {
