@@ -17,6 +17,8 @@
             <Label x:Name="Textis"
                    Text=""
                    HorizontalOptions="CenterAndExpand"/>
+            <ImageButton Source="restart.png"
+                         VerticalOptions="End"/>
             <RadioButton x:Name="radioE"
                 Text="Email"
                 />
