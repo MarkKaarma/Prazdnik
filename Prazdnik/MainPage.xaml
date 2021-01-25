@@ -2,41 +2,41 @@
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Prazdnik.MainPage">
-    <ContentPage><!--Первая страница. Основа задания. Можно выбрать из списка кому отправить и Label рандомно меняется при кнопки. Также есть RadioButton (эмайл или СМС)-->
+    <ContentPage>
+        <!--Первая страница. Основа задания. Можно выбрать из списка кому отправить и Label рандомно меняется при кнопки. Также есть RadioButton (эмайл или СМС)-->
         <StackLayout>
             <Label Text="Поздравление друзей! Выбирай из списка кому хочешь отправить"
                    HorizontalOptions="Center" />
             <Picker x:Name="friend"
-                Title="Выбирай своего компаньона"
-                
-                />
+                Title="Выбирай своего компаньона"/>
             <Label x:Name="emaile"
                 HorizontalOptions="CenterAndExpand"/>
             <Label x:Name="telefone"
                    HorizontalOptions="CenterAndExpand"/>
-            <Label x:Name="Textis"
-                   Text=""
+            <Label x:Name="textis"
+                   Text="Почтой"
                    HorizontalOptions="CenterAndExpand"/>
-            <ImageButton Source="restart.png"
-                         VerticalOptions="End"/>
-            <RadioButton x:Name="radioE"
-                Text="Email"
-                />
-            <RadioButton x:Name="radioT"
-                      Text="SMS"   
-                         />
-            <Button
+            <Label x:Name="rando" Text="Поздравление" HorizontalOptions="CenterAndExpand"/>
+            <ImageButton x:Name="restbtn" Source="restart.png"
+                         VerticalOptions="End" 
+                         WidthRequest = "50"
+                         HeightRequest = "50" 
+                         Clicked="restbtn_Clicked"/>
+            <Button x:Name="btn"
                 Text="Отправить"
-                VerticalOptions="Center"
-                />
-
-    
+                VerticalOptions="Center"/>
+            <Switch x:Name="swith" 
+                OnColor="Red"
+                ThumbColor="BurlyWood" IsToggled="False" Toggled="swith_Toggled" />
         </StackLayout>
     </ContentPage>
 
-    <ContentPage> 
+    <ContentPage> <!--Вторая страница. Нужна для того, чтобы отправить другу свое сообственое приглашение. Разница первой страницы в том, что можно будет реализовать сюда базу данных и добавлять в список первой страницы, однако 25.01.2021 не сделано это.-->
         <StackLayout>
-            
+            <Label Text="Отправь собственное поздравление другу!" FontSize="Large" />
+            <Entry x:Name="emailCustom" Placeholder="Введи почту своего друга или номер телефона" />
+            <Editor BackgroundColor="#E3E3E3" HeightRequest="250" />
+            <Button x:Name="otpravka" Text="Отправить"/>
         </StackLayout>
-   </ContentPage>  
+    </ContentPage>  
 </CarouselPage>
