@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Prazdnik.MainPage">
     <ContentPage>
-        <!--Первая страница. Основа задания. Можно выбрать из списка кому отправить и Label рандомно меняется при кнопки. Также есть RadioButton (эмайл или СМС)-->
+        <!--Первая страница. Основа задания. Можно выбрать из списка кому отправить и Label рандомно меняется при кнопки. Также есть Switch (эмайл или СМС)-->
         <StackLayout>
-            <Label Text="Поздравление друзей! Выбирай из списка кому хочешь отправить"
+            <Label FontSize="Large" 
+                Text="Поздравление друзей! Выбирай из списка кому хочешь отправить"
                    HorizontalOptions="Center" />
             <Picker x:Name="friend"
                 Title="Выбирай своего компаньона"/>
@@ -14,7 +15,7 @@
             <Label x:Name="telefone"
                    HorizontalOptions="CenterAndExpand"/>
             <Label x:Name="textis"
-                   Text="Почтой"
+                   Text="Почта"
                    HorizontalOptions="CenterAndExpand"/>
             <Label x:Name="rando" Text="Поздравление" HorizontalOptions="CenterAndExpand"/>
             <ImageButton x:Name="restbtn" Source="restart.png"
